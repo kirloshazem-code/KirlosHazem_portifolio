@@ -780,3 +780,263 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(journeySection);
     }
 });
+
+
+
+
+/* =========================================================
+   PREMIUM SERVICES SECTION - JAVASCRIPT
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       SERVICE DETAILS TOGGLE
+       ===================================================== */
+
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    serviceCards.forEach(card => {
+
+        const toggle = card.querySelector(".service-toggle");
+
+        if (!toggle) return;
+
+        toggle.addEventListener("click", () => {
+
+            const isActive = card.classList.contains("active");
+
+            // Close all other cards
+            serviceCards.forEach(otherCard => {
+                otherCard.classList.remove("active");
+
+                const otherToggle =
+                    otherCard.querySelector(".service-toggle");
+
+                if (otherToggle) {
+                    otherToggle.innerHTML =
+                        'View Details <i class="fas fa-arrow-right"></i>';
+                }
+            });
+
+            // Open clicked card
+            if (!isActive) {
+
+                card.classList.add("active");
+
+                toggle.innerHTML =
+                    'Hide Details <i class="fas fa-arrow-up"></i>';
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       SCROLL REVEAL
+       ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -50px 0px"
+            }
+        );
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+    } else {
+
+        revealElements.forEach(element => {
+            element.classList.add("visible");
+        });
+
+    }
+
+
+    /* =====================================================
+       COUNTER ANIMATION
+       ===================================================== */
+
+    const counters =
+        document.querySelectorAll(".counter");
+
+    const animateCounter = counter => {
+
+        const target =
+            Number(counter.dataset.target);
+
+        const duration = 1500;
+
+        const startTime = performance.now();
+
+        const updateCounter = currentTime => {
+
+            const elapsed =
+                currentTime - startTime;
+
+            const progress =
+                Math.min(elapsed / duration, 1);
+
+            // Ease-out effect
+            const easedProgress =
+                1 - Math.pow(1 - progress, 3);
+
+            const currentValue =
+                Math.floor(target * easedProgress);
+
+            counter.textContent =
+                currentValue + "+";
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + "+";
+            }
+
+        };
+
+        requestAnimationFrame(updateCounter);
+    };
+
+
+    /* =====================================================
+       COUNTER OBSERVER
+       ===================================================== */
+
+    if ("IntersectionObserver" in window) {
+
+        const counterObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            animateCounter(entry.target);
+
+                            counterObserver.unobserve(
+                                entry.target
+                            );
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.5
+                }
+            );
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+    } else {
+
+        counters.forEach(counter => {
+            counter.textContent =
+                counter.dataset.target + "+";
+        });
+
+    }
+
+
+    /* =====================================================
+       SMOOTH SCROLL
+       ===================================================== */
+
+    document
+        .querySelectorAll('.services-section a[href^="#"]')
+        .forEach(link => {
+
+            link.addEventListener("click", event => {
+
+                const targetId =
+                    link.getAttribute("href");
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) return;
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            });
+
+        });
+
+
+    /* =====================================================
+       SERVICE CARD KEYBOARD ACCESSIBILITY
+       ===================================================== */
+
+    serviceCards.forEach(card => {
+
+        card.addEventListener("keydown", event => {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                const toggle =
+                    card.querySelector(".service-toggle");
+
+                if (document.activeElement === toggle) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                toggle?.click();
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       STAGGERED CARD ANIMATION
+       ===================================================== */
+
+    document
+        .querySelectorAll(".services-grid .service-card")
+        .forEach((card, index) => {
+
+            card.style.transitionDelay =
+                `${index * 0.08}s`;
+
+        });
+
+});
+
