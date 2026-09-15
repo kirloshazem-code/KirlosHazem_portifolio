@@ -158,52 +158,97 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ======================
-    // CONTACT FORM
-    // ======================
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Validation
-            if (!data.name || !data.email || !data.message) {
-                showNotification('Please fill in all fields.', 'error');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            try {
-                // In production, replace with actual API call
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                
-                // Show success message
-                showNotification('Message sent successfully! I will get back to you soon!', 'success');
+// CONTACT FORM
+// ======================
+
+if (contactForm) {
+
+    contactForm.addEventListener('submit', async (e) => {
+
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        // Get form data
+        const formData = new FormData(contactForm);
+
+        const name = formData.get('name')?.trim();
+        const email = formData.get('email')?.trim();
+        const message = formData.get('message')?.trim();
+
+        // Validation
+        if (!name || !email || !message) {
+            showNotification('Please fill in all fields.', 'error');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address.', 'error');
+            return;
+        }
+
+        // Loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        try {
+
+            // Send form to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+
+                showNotification(
+                    'Message sent successfully! I will get back to you soon!',
+                    'success'
+                );
+
                 contactForm.reset();
-                
-            } catch (error) {
-                showNotification('Error sending message. Please try again.', 'error');
-            } finally {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
+
+            } else {
+
+                const data = await response.json().catch(() => null);
+
+                if (data && data.errors) {
+                    showNotification(
+                        data.errors.map(error => error.message).join(', '),
+                        'error'
+                    );
+                } else {
+                    showNotification(
+                        'Error sending message. Please try again.',
+                        'error'
+                    );
+                }
             }
-        });
-    }
+
+        } catch (error) {
+
+            console.error('Form submission error:', error);
+
+            showNotification(
+                'Error sending message. Please check your connection and try again.',
+                'error'
+            );
+
+        } finally {
+
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+
+        }
+    });
+}
 
     // ======================
     // ANIMATIONS & EFFECTS
