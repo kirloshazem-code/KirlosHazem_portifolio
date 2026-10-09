@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Misuo Sales Analytics | Kirlos Hazem</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0d;
+            color: #f5f5f5;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        .top-nav {
+            padding: 25px 0;
+            border-bottom: 1px solid #252525;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #d4af37;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0 60px;
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #66531d;
+            border-radius: 30px;
+            color: #d4af37;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .tools span {
+            border: 1px solid #333;
+            background: #151515;
+            color: #ddd;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        /* Project cover */
+
+        .cover {
+            margin: 20px auto 80px;
+            overflow: hidden;
+            border: 1px solid #39301a;
+            border-radius: 14px;
+            background: #141414;
+            box-shadow: 0 20px 60px #0008;
+        }
+
+        .cover img {
+            display: block;
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            cursor: zoom-in;
+            transition: transform 0.5s;
+        }
+
+        .cover img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Sections */
+
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-label {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section h2 {
+            font-size: clamp(26px, 4vw, 38px);
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #aaa;
+            max-width: 750px;
+        }
+
+        /* Work cards */
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .work-card {
+            background: #121214;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .work-card:hover {
+            border-color: #b99a36;
+            transform: translateY(-5px);
+        }
+
+        .work-card .number {
+            color: #d4af37;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .work-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .work-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Gallery */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            min-height: 180px;
+            max-height: 350px;
+            object-fit: contain;
+            background: #141414;
+            border: 1px solid #292929;
+            border-radius: 10px;
+            cursor: zoom-in;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            border-color: #d4af37;
+            transform: translateY(-4px);
+        }
+
+        /* Image viewer */
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.94);
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .image-viewer.active {
+            display: flex;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .image-viewer img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .viewer-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+
+        .project-end {
+            text-align: center;
+            padding: 70px 0;
+            margin-top: 40px;
+            border-top: 1px solid #252525;
+        }
+
+        .project-end h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .gold-btn {
+            display: inline-block;
+            padding: 13px 24px;
+            background: #d4af37;
+            color: #111;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .gold-btn:hover {
+            background: #f0d675;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #222;
+            font-size: 13px;
+        }
+
+        /* Animations */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding-top: 65px;
+            }
+
+            .work-grid,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .work-card {
+                padding: 22px;
+            }
+
+            .cover img {
+                max-height: 400px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="../index.html" class="back-btn">
+                <span>←</span>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <span class="tag">DATA ANALYTICS PROJECT</span>
+
+            <h1>
+                Misuo Sales<br>
+                <span>Analytics</span>
+            </h1>
+
+            <p>
+                Exploring business data and transforming raw information
+                into meaningful insights through data analysis and
+                visualization.
+            </p>
+
+            <div class="tools">
+                <span>Microsoft Excel</span>
+                <span>Data Cleaning</span>
+                <span>Data Visualization</span>
+                <span>Business Analysis</span>
+            </div>
+
+        </section>
+
+        <!-- Main Image -->
+        <section class="cover reveal">
+            <img
+                src="../img/مشروع ماثيو.png"
+                alt="Misuo Sales Analytics Project"
+                class="gallery-image">
+        </section>
+
+        <!-- Overview -->
+        <section class="section reveal">
+
+            <p class="section-label">01 / Overview</p>
+
+            <h2>Project Overview</h2>
+
+            <p class="section-description">
+                This project focuses on analyzing business data and
+                presenting the results through clear visualizations.
+                The objective is to make information easier to understand
+                and support data-driven decision-making.
+            </p>
+
+        </section>
+
+        <!-- My Work -->
+        <section class="section reveal">
+
+            <p class="section-label">02 / My Contribution</p>
+
+            <h2>What I Did</h2>
+
+            <p class="section-description">
+                The project workflow can include the following activities.
+                Update these descriptions to match the work you actually
+                completed.
+            </p>
+
+            <div class="work-grid">
+
+                <article class="work-card">
+                    <p class="number">STEP 01</p>
+                    <h3>Data Preparation</h3>
+                    <p>
+                        Prepared the dataset and checked the structure
+                        and quality of the available data.
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <p class="number">STEP 02</p>
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Examined the data to identify patterns,
+                        trends, and useful business information.
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <p class="number">STEP 03</p>
+                    <h3>Data Visualization</h3>
+                    <p>
+                        Presented information using visual elements
+                        to make the results easier to interpret.
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <p class="number">STEP 04</p>
+                    <h3>Insights</h3>
+                    <p>
+                        Organized the findings into a clear format
+                        to help communicate the results.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Gallery -->
+        <section class="section reveal">
+
+            <p class="section-label">03 / Visual Showcase</p>
+
+            <h2>Project Screenshots</h2>
+
+            <p class="section-description">
+                Explore the project visuals. Click an image to view
+                it in fullscreen.
+            </p>
+
+            <div class="gallery">
+
+                <!-- Replace these paths with your actual screenshots -->
+
+                <img
+                    src="../img/Projects/Misuo/2.png"
+                    alt="Project Overview"
+                    class="gallery-image">
+
+                <img
+                    src="../img/Projects/Misuo/1.png"
+                    alt="Data Visualization"
+                    class="gallery-image">
+
+            </div>
+
+        </section>
+
+        <!-- Insights -->
+        <section class="section reveal">
+
+            <p class="section-label">04 / Findings</p>
+
+            <h2>Key Takeaways</h2>
+
+            <p class="section-description">
+                Add the actual findings from your analysis here.
+                For example, you could describe sales trends,
+                product performance, or differences between categories
+                if your dataset supports those conclusions.
+            </p>
+
+        </section>
+
+        <!-- Back -->
+        <section class="project-end reveal">
+
+            <h2>Want to explore more?</h2>
+
+            <p class="section-description" style="margin: 0 auto 25px;">
+                Return to the portfolio to discover more projects.
+            </p>
+
+            <a href="../index.html" class="gold-btn">
+                ← Back to Portfolio
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Kirlos Hazem Eskander. All rights reserved.
+    </footer>
+
+    <!-- Fullscreen Image Viewer -->
+    <div
+        class="image-viewer"
+        id="imageViewer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Fullscreen project image">
+
+        <button
+            class="viewer-close"
+            id="viewerClose"
+            aria-label="Close image viewer">
+            ×
+        </button>
+
+        <img id="viewerImage" src="" alt="Project Preview">
+
+    </div>
+
+    <script>
+        // Reveal elements when scrolling
+        const revealObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+
+        document.querySelectorAll(".reveal").forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // Fullscreen image viewer
+        const viewer = document.getElementById("imageViewer");
+        const viewerImage = document.getElementById("viewerImage");
+        const closeButton = document.getElementById("viewerClose");
+
+        document.querySelectorAll(".gallery-image").forEach(image => {
+            image.addEventListener("click", () => {
+                viewerImage.src = image.src;
+                viewerImage.alt = image.alt;
+                viewer.classList.add("active");
+                closeButton.focus();
+            });
+        });
+
+        function closeViewer() {
+            viewer.classList.remove("active");
+            viewerImage.src = "";
+        }
+
+        closeButton.addEventListener("click", closeViewer);
+
+        viewer.addEventListener("click", event => {
+            if (event.target === viewer) {
+                closeViewer();
+            }
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeViewer();
+            }
+        });
+    </script>
+
+</body>
+</html>

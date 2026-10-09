@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Sallah Call Center Analysis Dashboard project by Kirlos Hazem.">
+
+    <title>Sallah Call Center Analytics | Kirlos Hazem</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0d;
+            color: #f5f5f5;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            padding: 22px 0;
+            border-bottom: 1px solid #252525;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #d4af37;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: white;
+            transform: translateX(-4px);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 90px 0 45px;
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border: 1px solid #66531d;
+            border-radius: 30px;
+            color: #d4af37;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(35px, 6vw, 62px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #d4af37;
+        }
+
+        .hero-description,
+        .description {
+            max-width: 780px;
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        /* Tools */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .tools span {
+            padding: 8px 15px;
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #ddd;
+            font-size: 13px;
+        }
+
+        /* Dashboard image */
+
+        .preview {
+            margin: 25px 0 50px;
+            border: 1px solid #39301a;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #141414;
+        }
+
+        .preview img {
+            display: block;
+            width: 100%;
+            height: auto;
+            cursor: zoom-in;
+            transition: transform 0.4s;
+        }
+
+        .preview img:hover {
+            transform: scale(1.015);
+        }
+
+        /* Sections */
+
+        .section {
+            padding: 45px 0;
+        }
+
+        .section-label {
+            color: #d4af37;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 18px;
+        }
+
+        /* Work cards */
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .work-card {
+            background: #121214;
+            border: 1px solid #292929;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            border-color: #b99a36;
+        }
+
+        .number {
+            color: #d4af37;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .work-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .work-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .gold-btn,
+        .outline-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .gold-btn {
+            background: #d4af37;
+            color: #111;
+        }
+
+        .gold-btn:hover {
+            background: #f0d675;
+            transform: translateY(-3px);
+        }
+
+        .outline-btn {
+            border: 1px solid #d4af37;
+            color: #d4af37;
+        }
+
+        .outline-btn:hover {
+            background: #d4af37;
+            color: #111;
+        }
+
+        /* Image viewer */
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .image-viewer.active {
+            display: flex;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .image-viewer img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .viewer-close {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+
+        .project-end {
+            text-align: center;
+            padding: 70px 0;
+            margin-top: 40px;
+            border-top: 1px solid #252525;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            border-top: 1px solid #252525;
+            font-size: 13px;
+        }
+
+        /* Animations */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding-top: 60px;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <nav>
+        <div class="container">
+
+            <a href="../index.html" class="back-btn">
+                <span>←</span>
+                Back to Portfolio
+            </a>
+
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Project Hero -->
+        <section class="hero">
+
+            <span class="tag">POWER BI PROJECT</span>
+
+            <h1>
+                Sallah Call Center<br>
+                <span>Analytics</span>
+            </h1>
+
+            <p class="hero-description">
+                A call center analytics project focused on presenting
+                operational data through visual reporting and helping
+                stakeholders explore performance metrics.
+            </p>
+
+            <div class="tools">
+                <span>Power BI</span>
+                <span>Data Visualization</span>
+                <span>Business Intelligence</span>
+                <span>Data Analysis</span>
+            </div>
+
+        </section>
+
+        <!-- Dashboard Preview -->
+        <section class="preview reveal">
+
+            <img
+                src="../img/داشبورد كول سينتر.png"
+                alt="Sallah Call Center Analysis Dashboard"
+                class="gallery-image">
+
+        </section>
+
+        <!-- Overview -->
+        <section class="section reveal">
+
+            <p class="section-label">01 / OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p class="description">
+                This project showcases a Power BI dashboard created
+                for call center analysis. The dashboard presents
+                operational information visually, making it easier
+                to review the metrics included in the report.
+            </p>
+
+        </section>
+
+        <!-- My Contribution -->
+        <section class="section reveal">
+
+            <p class="section-label">02 / MY CONTRIBUTION</p>
+
+            <h2>What I Did</h2>
+
+            <p class="description">
+                Customize the descriptions below to reflect the
+                actual tasks you completed in this project.
+            </p>
+
+            <div class="work-grid">
+
+                <article class="work-card">
+
+                    <p class="number">STEP 01</p>
+
+                    <h3>Data Preparation</h3>
+
+                    <p>
+                        Describe how you prepared and checked
+                        the data used in the report.
+                    </p>
+
+                </article>
+
+                <article class="work-card">
+
+                    <p class="number">STEP 02</p>
+
+                    <h3>KPI Analysis</h3>
+
+                    <p>
+                        Explain the performance indicators included
+                        in your dashboard and what they measure.
+                    </p>
+
+                </article>
+
+                <article class="work-card">
+
+                    <p class="number">STEP 03</p>
+
+                    <h3>Dashboard Design</h3>
+
+                    <p>
+                        Describe the layout, charts, filters,
+                        and interactive elements you implemented.
+                    </p>
+
+                </article>
+
+                <article class="work-card">
+
+                    <p class="number">STEP 04</p>
+
+                    <h3>Reporting</h3>
+
+                    <p>
+                        Explain how the visualizations help users
+                        understand the call center data.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Project Highlights -->
+        <section class="section reveal">
+
+            <p class="section-label">03 / PROJECT HIGHLIGHTS</p>
+
+            <h2>Dashboard Preview</h2>
+
+            <p class="description">
+                View the dashboard image in detail or visit the
+                original LinkedIn post to see the project presentation.
+            </p>
+
+            <div class="actions">
+
+                <a
+                    href="https://www.linkedin.com/posts/kirlos-hazem_dataanalytics-powerbi-datavisualization-ugcPost-7462933272017321985-9-5m/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="gold-btn">
+
+                    View Project on LinkedIn ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Insights -->
+        <section class="section reveal">
+
+            <p class="section-label">04 / KEY TAKEAWAYS</p>
+
+            <h2>Insights & Findings</h2>
+
+            <p class="description">
+                Add the actual findings supported by your dashboard.
+                You might discuss call volume, response times,
+                customer satisfaction, or agent performance if
+                those metrics are present in your report.
+            </p>
+
+        </section>
+
+        <!-- End -->
+        <section class="project-end reveal">
+
+            <h2>Explore More Projects</h2>
+
+            <p class="description" style="margin: 0 auto 25px;">
+                Return to the main portfolio to explore more
+                data analytics projects.
+            </p>
+
+            <a href="../index.html" class="gold-btn">
+                ← Back to Portfolio
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Kirlos Hazem Eskander. All rights reserved.
+    </footer>
+
+    <!-- Fullscreen Image Viewer -->
+    <div
+        class="image-viewer"
+        id="imageViewer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Dashboard image viewer">
+
+        <button
+            class="viewer-close"
+            id="viewerClose"
+            aria-label="Close image viewer">
+            ×
+        </button>
+
+        <img id="viewerImage" src="" alt="Dashboard Preview">
+
+    </div>
+
+    <script>
+        // Scroll reveal animation
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+
+        document.querySelectorAll(".reveal").forEach(element => {
+            observer.observe(element);
+        });
+
+        // Fullscreen dashboard image
+        const viewer = document.getElementById("imageViewer");
+        const viewerImage = document.getElementById("viewerImage");
+        const closeButton = document.getElementById("viewerClose");
+
+        document.querySelectorAll(".gallery-image").forEach(image => {
+            image.addEventListener("click", () => {
+                viewerImage.src = image.src;
+                viewerImage.alt = image.alt;
+                viewer.classList.add("active");
+                closeButton.focus();
+            });
+        });
+
+        function closeViewer() {
+            viewer.classList.remove("active");
+            viewerImage.src = "";
+        }
+
+        closeButton.addEventListener("click", closeViewer);
+
+        viewer.addEventListener("click", event => {
+            if (event.target === viewer) {
+                closeViewer();
+            }
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeViewer();
+            }
+        });
+    </script>
+
+</body>
+</html>
