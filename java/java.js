@@ -1085,3 +1085,130 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+(function () {
+    'use strict';
+ 
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+    /* ---------- Footer year ---------- */
+    var yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+ 
+    /* ---------- Scroll progress bar ---------- */
+    var bar = document.querySelector('.scroll-progress');
+    function updateProgress() {
+        if (!bar) return;
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+ 
+    /* ---------- Rotating role text in the hero ---------- */
+    var rotator = document.getElementById('role-rotator');
+    if (rotator && !reduceMotion) {
+        var words = ['decisions', 'dashboards', 'insights', 'machine learning', 'impact'];
+        var w = 0, c = 0, deleting = false;
+        (function tick() {
+            var word = words[w];
+            rotator.textContent = word.substring(0, c);
+            var delay = deleting ? 45 : 95;
+            if (!deleting && c === word.length) { deleting = true; delay = 1600; }
+            else if (deleting && c === 0) { deleting = false; w = (w + 1) % words.length; delay = 350; }
+            c += deleting ? -1 : 1;
+            setTimeout(tick, delay);
+        })();
+    }
+ 
+    /* ---------- Count-up numbers ([data-count]) ---------- */
+    var counters = document.querySelectorAll('[data-count]');
+    function runCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        if (reduceMotion) { el.textContent = target; return; }
+        var start = null, dur = 1400;
+        function step(ts) {
+            if (!start) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            el.textContent = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(step); else el.textContent = target;
+        }
+        requestAnimationFrame(step);
+    }
+ 
+    /* ---------- Reveal on scroll (+ timeline blocks) ---------- */
+    if ('IntersectionObserver' in window) {
+        var revealObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    revealObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal, .timeline-block').forEach(function (el) { revealObs.observe(el); });
+ 
+        var countObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { runCount(e.target); countObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.6 });
+        counters.forEach(function (el) { countObs.observe(el); });
+    } else {
+        document.querySelectorAll('.reveal, .timeline-block').forEach(function (el) { el.classList.add('visible'); });
+        counters.forEach(runCount);
+    }
+ 
+    /* ---------- Active nav link while scrolling ---------- */
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    var sections = navLinks.map(function (a) {
+        return document.querySelector(a.getAttribute('href'));
+    });
+ 
+    function setActive() {
+        var y = window.scrollY + window.innerHeight * 0.35;
+        var current = 0;
+        sections.forEach(function (sec, i) {
+            if (sec && sec.offsetTop <= y) current = i;
+        });
+        navLinks.forEach(function (a, i) { a.classList.toggle('active', i === current); });
+    }
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+ 
+    /* ---------- Filter bars (projects & certificates) ---------- */
+    document.querySelectorAll('.filter-bar').forEach(function (bar) {
+        var grid = document.querySelector(bar.getAttribute('data-target'));
+        if (!grid) return;
+        var items = grid.children;
+ 
+        bar.addEventListener('click', function (ev) {
+            var btn = ev.target.closest('.filter-btn');
+            if (!btn) return;
+ 
+            bar.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+ 
+            var filter = btn.getAttribute('data-filter');
+            Array.prototype.forEach.call(items, function (item) {
+                var cats = (item.getAttribute('data-category') || '').split(/\s+/);
+                var show = filter === 'all' || cats.indexOf(filter) !== -1;
+                item.classList.toggle('is-hidden', !show);
+                if (show) { // replay entrance animation
+                    item.style.animation = 'none';
+                    void item.offsetWidth;
+                    item.style.animation = '';
+                }
+            });
+        });
+    });
+ 
+    /* ---------- Close mobile menu after tapping a link ---------- */
+    var menu = document.querySelector('.nav-links');
+    navLinks.forEach(function (a) {
+        a.addEventListener('click', function () {
+            if (menu) menu.classList.remove('active');
+        });
+    });
+})();
+ 

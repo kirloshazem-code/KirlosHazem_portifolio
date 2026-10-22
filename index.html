@@ -4,11 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirlos Hazem | Data Scientist</title>
+    <title>Kirlos Hazem | Data Analyst &amp; Data Scientist</title>
     <meta name="description"
-        content="Portfolio of Kirlos Hazem - Data Science student specializing in Python, SQL, Excel, Power BI, and data analysis">
-    <meta name="keywords" content="Data Science, Python, SQL, Excel, Power BI, Machine Learning, Data Analysis">
+        content="Portfolio of Kirlos Hazem — Data Science student and freelance Data Analyst from Egypt. Power BI dashboards, SQL, Python, machine learning, and web scraping projects.">
+    <meta name="keywords"
+        content="Kirlos Hazem, Data Analyst, Data Scientist, Power BI, SQL, Python, Excel, Machine Learning, Web Scraping, Egypt">
     <meta name="author" content="Kirlos Hazem">
+    <meta name="theme-color" content="#02020a">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kirlos Hazem | Data Analyst &amp; Data Scientist">
+    <meta property="og:description"
+        content="Turning raw data into dashboards, insights, and decisions. Power BI · SQL · Python · Machine Learning.">
+    <meta property="og:url" content="https://kirloshazem-code.github.io/">
+    <meta property="og:image" content="https://kirloshazem-code.github.io/img/avatar.jpg.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kirlos Hazem",
+        "jobTitle": "Data Analyst & Data Scientist",
+        "url": "https://kirloshazem-code.github.io/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Tanta", "addressCountry": "EG" },
+        "sameAs": [
+            "https://www.linkedin.com/in/kirlos-hazem",
+            "https://github.com/kirloshazem-code",
+            "https://www.credly.com/users/kirlos-hazem"
+        ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -16,35 +44,35 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extras.css">
     <link rel="stylesheet" href="css/myfont.css">
-    <script src="java/java.js"></script>
-
-
+    <script src="java/java.js" defer></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Header Section - السيكشن الأول -->
+    <!-- ==================== HERO ==================== -->
     <header class="header hero-section" id="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <a href="#header" class="logo">Kirlos Hazem</a>
             <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
                 <li><a href="#header">Home</a></li>
-                <li><a href="#about-details">About Me</a></li>
+                <li><a href="#about-details">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#soft-skills">Soft Skills</a></li>
-                <li><a href="#career-journey">Professional Journey</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#career-journey">Experience</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -52,33 +80,57 @@
 
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Data Science <span class="highlight">Portfolio</span></h1>
-                <p class="hero-subtitle">Transforming Data into Actionable Insights</p>
+                <span class="hero-eyebrow">Data Analyst · Data Scientist</span>
+
+                <h1 class="hero-title">
+                    <span class="t-blue">Kirlos</span>
+                    <span class="t-pink">Hazem</span>
+                </h1>
+
+                <p class="hero-roles">
+                    Where data meets <span class="role-rotator" id="role-rotator">decisions</span><span
+                        class="role-cursor" aria-hidden="true">|</span>
+                </p>
+
+                <p class="hero-subtitle">Transforming data into actionable insights</p>
+
+                <p class="hero-badge">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Open to internships &amp; freelance projects
+                </p>
+
                 <div class="hero-buttons">
-                    <a href="cv/Kirlos_Hazem_CV.pdf" download class="btn download-btn">
+                    <a href="#projects" class="cta-circle" aria-label="Explore my work">
+                        <span class="cta-circle-icon"><i class="fas fa-arrow-right"></i></span>
+                        <span class="cta-circle-text">Explore my work</span>
+                    </a>
+
+                    <a href="cv/Kirlos Hazem _CV.pdf" download class="btn download-btn">
                         <i class="fas fa-download"></i>
                         Download CV
                     </a>
                 </div>
+
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">+7</span>
+                        <span class="stat-number"><span data-count="14">0</span>+</span>
                         <span class="stat-label">Projects</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">10+</span>
+                        <span class="stat-number"><span data-count="24">0</span>+</span>
                         <span class="stat-label">Certificates</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">+10</span>
-                        <span class="stat-label">Skills</span>
+                        <span class="stat-number"><span data-count="30">0</span>+</span>
+                        <span class="stat-label">Skills &amp; Tools</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-avatar">
                 <div class="avatar-frame">
-                    <img src="img/avatar.jpg.jpeg" alt="Kirlos Hazem - Data Science Student" loading="lazy">
+                    <img src="img/avatar.jpg.jpeg" alt="Kirlos Hazem — Data Science student and Data Analyst"
+                        width="400" height="500" fetchpriority="high">
                     <div class="avatar-corners">
                         <div class="avatar-corner tl"></div>
                         <div class="avatar-corner tr"></div>
@@ -86,23 +138,22 @@
                         <div class="avatar-corner br"></div>
                     </div>
 
-                    <!-- Floating Icons - أمام الصورة تماماً -->
                     <div class="floating-icons">
-                        <div class="floating-icon icon-excel" title="Excel Expert">
+                        <div class="floating-icon icon-excel" title="Excel">
                             <i class="fas fa-file-excel"></i>
-                            <span class="icon-tooltip">Excel Expert</span>
+                            <span class="icon-tooltip">Excel</span>
                         </div>
-                        <div class="floating-icon icon-powerbi" title="Power BI Specialist">
+                        <div class="floating-icon icon-powerbi" title="Power BI">
                             <i class="fas fa-chart-bar"></i>
-                            <span class="icon-tooltip">Power BI Specialist</span>
+                            <span class="icon-tooltip">Power BI</span>
                         </div>
-                        <div class="floating-icon icon-python" title="Python Developer">
+                        <div class="floating-icon icon-python" title="Python">
                             <i class="fab fa-python"></i>
-                            <span class="icon-tooltip">Python Developer</span>
+                            <span class="icon-tooltip">Python</span>
                         </div>
-                        <div class="floating-icon icon-sql" title="SQL Master">
+                        <div class="floating-icon icon-sql" title="SQL">
                             <i class="fas fa-database"></i>
-                            <span class="icon-tooltip">SQL Master</span>
+                            <span class="icon-tooltip">SQL</span>
                         </div>
                     </div>
 
@@ -110,14 +161,12 @@
                 </div>
             </div>
 
-            <!-- Scroll Down Button -->
             <a href="#about-details" class="scroll-down-btn">
                 <span>Discover More</span>
                 <i class="fas fa-chevron-down"></i>
             </a>
 
-            <!-- Tech Particles Background -->
-            <div class="tech-particles">
+            <div class="tech-particles" aria-hidden="true">
                 <div class="particle" style="--i:1"></div>
                 <div class="particle" style="--i:2"></div>
                 <div class="particle" style="--i:3"></div>
@@ -132,1790 +181,1037 @@
         </div>
     </header>
 
-    <!-- About Details Section - السيكشن الجديد -->
-    <section class="about-details" id="about-details">
-        <div class="container">
-            <div class="about-header">
-                <h2>About <span class="highlight">Me</span></h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
+    <main id="main">
 
-            <div class="about-grid">
-                <div class="about-card personal-info">
-                    <div class="card-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Personal Information</h3>
-                    <ul class="info-list">
-                        <li>
-                            <i class="fas fa-user-tag"></i>
-                            <strong>Name:</strong> Kirlos Hazem Emeel
-                        </li>
-                        <li>
-                            <i class="fas fa-graduation-cap"></i>
-                            <strong>Education:</strong> Data Science Student at Menoufia National University
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <strong>Location:</strong> Tanta, Egypt
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <strong>Email:</strong> kokokokohazem@gmail.com
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <strong>Phone:</strong> +20 1204322696
-                        </li>
-                    </ul>
+        <!-- ==================== ABOUT ==================== -->
+        <section class="about-details" id="about-details">
+            <div class="container">
+                <div class="about-header reveal">
+                    <h2>About <span class="highlight">Me</span></h2>
+                    <p class="section-subtitle">Get to know me better</p>
                 </div>
 
-                <div class="about-card bio">
-                    <div class="card-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>My Passion</h3>
-                    <p>"Hi! I'm Kirlos Hazem, a passionate Data Science student dedicated to turning raw data into
-                        meaningful insights. I have hands-on experience with <mark>Python</mark>, <mark>SQL</mark>,
-                        <mark>Excel</mark>, <mark>Power BI</mark>, and <mark>I love solving real-world problems through
-                            data analysis</mark>. Always eager to learn new skills and take on exciting projects that
-                        make a difference."</p>
+                <div class="about-grid">
+                    <div class="about-card bio reveal">
+                        <div class="card-icon"><i class="fas fa-heart"></i></div>
+                        <h3>My Story</h3>
+                        <p>I'm <strong>Kirlos Hazem</strong>, a Data Science student at Menoufia National University
+                            and a freelance data analyst based in Tanta, Egypt. I turn raw, messy data into clear
+                            dashboards and decisions using <mark>Python</mark>, <mark>SQL</mark>, <mark>Excel</mark>
+                            and <mark>Power BI</mark>.</p>
+                        <p>Beyond analysis, I'm growing into <mark>machine learning</mark>, <mark>web scraping</mark>
+                            and <mark>AI engineering</mark> — from regression models to a RAG question-answering system
+                            built during a five-day AI hackathon.</p>
 
-                    <div class="passion-points">
-                        <div class="passion-point">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Data Analysis</span>
-                        </div>
-                        <div class="passion-point">
-                            <i class="fas fa-brain"></i>
-                            <span>Machine Learning</span>
-                        </div>
-                        <div class="passion-point">
-                            <i class="fas fa-database"></i>
-                            <span>Database Management</span>
-                        </div>
-                        <div class="passion-point">
-                            <i class="fas fa-lightbulb"></i>
-                            <span>Problem Solving</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="social-connect">
-            <h3>Connect With Me</h3>
-            <div class="social-icons">
-
-                <a href="https://www.linkedin.com/in/kirlos-hazem" target="_blank" class="social-icon linkedin"
-                    aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span>LinkedIn</span>
-                </a>
-
-                <a href="https://github.com/kirloshazem-code" target="_blank" class="social-icon github"
-                    aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-
-                <a href="https://www.credly.com/users/kirlos-hazem" target="_blank" class="social-icon credly"
-                    aria-label="Credly Profile">
-                    <i class="fas fa-certificate"></i>
-                    <span>Credly</span>
-                </a>
-
-                <a href="mailto:kokokokohazem@gmail.com" class="social-icon email" aria-label="Send Email">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ==================== PROFESSIONAL SKILLS SECTION ==================== -->
-    <section class="skills-section" id="skills">
-
-        <div class="skills-container">
-
-            <!-- Section Header -->
-            <div class="section-header">
-                <span class="section-label">MY EXPERTISE</span>
-                <h1>Technical Skills</h1>
-                <p>
-                    Technologies, tools, and analytical skills I use to transform
-                    data into meaningful insights and solutions.
-                </p>
-            </div>
-
-
-            <!-- ==================== PROGRAMMING ==================== -->
-            <div class="skill-category">
-
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div>
-                        <h2>Programming</h2>
-                        <p>Languages & development technologies</p>
-                    </div>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon python">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Python</h3>
-                            <span>Advanced</span>
+                        <div class="passion-points">
+                            <div class="passion-point"><i class="fas fa-chart-line"></i><span>Data Analysis</span></div>
+                            <div class="passion-point"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+                            <div class="passion-point"><i class="fas fa-database"></i><span>Databases &amp; SQL</span>
+                            </div>
+                            <div class="passion-point"><i class="fas fa-robot"></i><span>AI Engineering</span></div>
                         </div>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon sql">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>SQL</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon java">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Java</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon cpp">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>C++</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon javascript">
-                            <i class="fab fa-js-square"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>JavaScript</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon html">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>HTML5</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon css">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>CSS3</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon dax">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>DAX</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- ==================== DATA ANALYSIS ==================== -->
-            <div class="skill-category">
-
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div>
-                        <h2>Data Analysis & Machine Learning</h2>
-                        <p>Data processing, analysis, statistics & modeling</p>
-                    </div>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon pandas">
-                            <i class="fas fa-table"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Pandas</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon numpy">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>NumPy</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon matplotlib">
-                            <i class="fas fa-chart-area"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Matplotlib</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon seaborn">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Seaborn</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon sklearn">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Scikit-learn</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon statistics">
-                            <i class="fas fa-square-root-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Statistical Analysis</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon algebra">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Linear Algebra</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon analysis">
-                            <i class="fas fa-magnifying-glass-chart"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Data Analysis</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- ==================== BI & VISUALIZATION ==================== -->
-            <div class="skill-category">
-
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-chart-column"></i>
-                    </div>
-                    <div>
-                        <h2>Data Visualization & BI</h2>
-                        <p>Business intelligence, dashboards & reporting</p>
-                    </div>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon powerbi">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Power BI</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon tableau">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Tableau</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon excel">
-                            <i class="fas fa-file-excel"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Microsoft Excel</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon pivot">
-                            <i class="fas fa-table-cells"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>PivotTables</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon powerquery">
-                            <i class="fas fa-filter"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Power Query</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- ==================== DATABASES ==================== -->
-            <div class="skill-category">
-
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <div>
-                        <h2>Databases & Data Engineering</h2>
-                        <p>Data storage, transformation & engineering concepts</p>
-                    </div>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon mysql">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>MySQL</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon sqlserver">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>SQL Server</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon etl">
-                            <i class="fas fa-arrows-rotate"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>ETL</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon warehouse">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Data Warehousing</h3>
-                            <span>Intermediate</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- ==================== TOOLS ==================== -->
-            <div class="skill-category">
-
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-toolbox"></i>
-                    </div>
-                    <div>
-                        <h2>Tools & Development</h2>
-                        <p>Development environment & version control</p>
-                    </div>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon git">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Git</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon github">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>GitHub</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon jupyter">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Jupyter Notebook</h3>
-                            <span>Advanced</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ==================== SOFT SKILLS SECTION ==================== -->
-    <section class="soft-skills" id="soft-skills">
-
-        <div class="soft-skills-container">
-
-            <!-- Section Header -->
-            <div class="section-header">
-                <span class="section-label">PERSONAL STRENGTHS</span>
-
-                <h1>Soft Skills</h1>
-
-                <p>
-                    Professional and interpersonal abilities that help me
-                    collaborate, solve problems, and deliver meaningful results.
-                </p>
-            </div>
-
-
-            <!-- Soft Skills Grid -->
-            <div class="soft-skills-grid">
-
-                <!-- Creative Thinking -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Creative Thinking</h3>
-                        <p>
-                            Innovative problem-solving and out-of-the-box
-                            approaches to complex challenges.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Team Leadership -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Team Leadership</h3>
-                        <p>
-                            Guiding teams toward common goals through
-                            motivation and clear direction.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Communication -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-comments" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Communication</h3>
-                        <p>
-                            Communicating technical and analytical ideas
-                            clearly to different audiences.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Problem Solving -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-bullseye" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Problem Solving</h3>
-                        <p>
-                            Identifying problems logically and developing
-                            practical and effective solutions.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Collaboration -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Collaboration</h3>
-                        <p>
-                            Working effectively with diverse teams to
-                            achieve shared project objectives.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Freelancing -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Freelancing</h3>
-                        <p>
-                            Managing independent projects, communicating
-                            with clients, and delivering quality work on time.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Time Management -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-clock" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Time Management</h3>
-                        <p>
-                            Prioritizing tasks efficiently and consistently
-                            meeting project deadlines.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Self Learning -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Self Learning</h3>
-                        <p>
-                            Continuously learning new technologies and
-                            improving technical and analytical skills.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- Analytical Mindset -->
-                <div class="soft-skill-card">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="soft-skill-info">
-                        <h3>Analytical Mindset</h3>
-                        <p>
-                            Turning information and data into clear,
-                            meaningful insights and decisions.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="services-section" id="services">
-
-        <div class="services-container">
-
-            <!-- Section Header -->
-            <div class="section-header services-header reveal">
-
-                <span class="section-label">WHAT I CAN DO</span>
-
-                <h1>Data Analysis & Data Science Services</h1>
-
-                <p>
-                    I turn raw data into clean datasets, meaningful insights,
-                    interactive dashboards, and data-driven solutions that
-                    support better business decisions.
-                </p>
-
-            </div>
-
-
-            <!-- Services Grid -->
-            <div class="services-grid">
-
-
-                <!-- Data Cleaning & EDA -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-broom"></i>
-                        </div>
-
-                        <span class="service-number">01</span>
-
-                    </div>
-
-                    <h2>Data Cleaning & EDA</h2>
-
-                    <p>
-                        Cleaning, preparing, and exploring datasets to uncover
-                        patterns, trends, relationships, and valuable insights.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Excel</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Data cleaning & preprocessing</li>
-                            <li>Missing value handling</li>
-                            <li>Duplicate detection</li>
-                            <li>Outlier identification</li>
-                            <li>Exploratory Data Analysis (EDA)</li>
-                            <li>Pattern & trend discovery</li>
+                    <div class="about-card personal-info reveal">
+                        <div class="card-icon"><i class="fas fa-user"></i></div>
+                        <h3>Quick Facts</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-user-tag"></i><span><strong>Name:</strong> Kirlos Hazem Emeel</span>
+                            </li>
+                            <li><i class="fas fa-graduation-cap"></i><span><strong>Education:</strong> B.Sc. Data
+                                    Science — Menoufia National University (2025 – 2029)</span></li>
+                            <li><i class="fas fa-briefcase"></i><span><strong>Role:</strong> Freelance Data
+                                    Analyst</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> Tanta,
+                                    Egypt</span></li>
+                            <li><i class="fas fa-language"></i><span><strong>Languages:</strong> Arabic (Egyptian) ·
+                                    English (professional)</span></li>
+                            <li><i class="fas fa-envelope"></i><span><strong>Email:</strong> <a
+                                        href="mailto:kokokokohazem@gmail.com">kokokokohazem@gmail.com</a></span></li>
+                            <li><i class="fas fa-phone"></i><span><strong>Phone:</strong> <a
+                                        href="tel:+201204322696">+20 1204322696</a></span></li>
                         </ul>
-
                     </div>
 
+                    <div class="about-card focus-card reveal">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>What I'm Looking For</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-check-circle"></i><span>Internships in <strong>Data Analysis, BI, Data
+                                        Science and AI / ML</strong></span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Freelance projects: dashboards, data
+                                    cleaning, SQL analysis and web scraping</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Teams where I can learn fast and ship real
+                                    work</span></li>
+                        </ul>
+                        <a href="#contact" class="inline-link">Let's talk <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="social-connect reveal">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/kirlos-hazem" target="_blank" rel="noopener noreferrer"
+                            class="social-icon linkedin" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/kirloshazem-code" target="_blank" rel="noopener noreferrer"
+                            class="social-icon github" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i><span>GitHub</span>
+                        </a>
+                        <a href="https://www.credly.com/users/kirlos-hazem" target="_blank" rel="noopener noreferrer"
+                            class="social-icon credly" aria-label="Credly Profile">
+                            <i class="fas fa-certificate"></i><span>Credly</span>
+                        </a>
+                        <a href="mailto:kokokokohazem@gmail.com" class="social-icon email" aria-label="Send Email">
+                            <i class="fas fa-envelope"></i><span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TECHNICAL SKILLS ==================== -->
+        <section class="skills-section" id="skills">
+            <div class="skills-container">
+
+                <div class="section-header reveal">
+                    <span class="section-label">MY EXPERTISE</span>
+                    <h1>Technical Skills</h1>
+                    <p>Technologies, tools, and analytical skills I use to transform data into meaningful insights and
+                        solutions.</p>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-code"></i></div>
+                        <div>
+                            <h2>Programming</h2>
+                            <p>Languages &amp; development technologies</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon python"><i class="fab fa-python"></i></div><div class="skill-info"><h3>Python</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon sql"><i class="fas fa-database"></i></div><div class="skill-info"><h3>SQL</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon dax"><i class="fas fa-chart-line"></i></div><div class="skill-info"><h3>DAX</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon java"><i class="fab fa-java"></i></div><div class="skill-info"><h3>Java</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon cpp"><i class="fas fa-code"></i></div><div class="skill-info"><h3>C++</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon javascript"><i class="fab fa-js-square"></i></div><div class="skill-info"><h3>JavaScript</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon html"><i class="fab fa-html5"></i></div><div class="skill-info"><h3>HTML5</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon css"><i class="fab fa-css3-alt"></i></div><div class="skill-info"><h3>CSS3</h3><span>Intermediate</span></div></div>
+                    </div>
+                </div>
+
+                <!-- Data Analysis & ML -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h2>Data Analysis &amp; Machine Learning</h2>
+                            <p>Data processing, analysis, statistics &amp; modeling</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon pandas"><i class="fas fa-table"></i></div><div class="skill-info"><h3>Pandas</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon numpy"><i class="fas fa-calculator"></i></div><div class="skill-info"><h3>NumPy</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon analysis"><i class="fas fa-magnifying-glass-chart"></i></div><div class="skill-info"><h3>Data Analysis</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon matplotlib"><i class="fas fa-chart-area"></i></div><div class="skill-info"><h3>Matplotlib</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon seaborn"><i class="fas fa-chart-pie"></i></div><div class="skill-info"><h3>Seaborn</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon sklearn"><i class="fas fa-brain"></i></div><div class="skill-info"><h3>Scikit-learn</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon statistics"><i class="fas fa-square-root-alt"></i></div><div class="skill-info"><h3>Statistical Analysis</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon algebra"><i class="fas fa-project-diagram"></i></div><div class="skill-info"><h3>Linear Algebra</h3><span>Intermediate</span></div></div>
+                    </div>
+                </div>
+
+                <!-- BI -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-chart-column"></i></div>
+                        <div>
+                            <h2>Data Visualization &amp; BI</h2>
+                            <p>Business intelligence, dashboards &amp; reporting</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon powerbi"><i class="fas fa-chart-bar"></i></div><div class="skill-info"><h3>Power BI</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon excel"><i class="fas fa-file-excel"></i></div><div class="skill-info"><h3>Microsoft Excel</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon pivot"><i class="fas fa-table-cells"></i></div><div class="skill-info"><h3>PivotTables</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon powerquery"><i class="fas fa-filter"></i></div><div class="skill-info"><h3>Power Query</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon tableau"><i class="fas fa-chart-pie"></i></div><div class="skill-info"><h3>Tableau</h3><span>Intermediate</span></div></div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-server"></i></div>
+                        <div>
+                            <h2>Databases &amp; Data Engineering</h2>
+                            <p>Data storage, transformation &amp; engineering concepts</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon sqlserver"><i class="fas fa-server"></i></div><div class="skill-info"><h3>SQL Server</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon mysql"><i class="fas fa-database"></i></div><div class="skill-info"><h3>MySQL</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon etl"><i class="fas fa-arrows-rotate"></i></div><div class="skill-info"><h3>ETL</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon warehouse"><i class="fas fa-warehouse"></i></div><div class="skill-info"><h3>Data Warehousing</h3><span>Intermediate</span></div></div>
+                    </div>
+                </div>
+
+                <!-- Scraping & AI -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-robot"></i></div>
+                        <div>
+                            <h2>Web Scraping &amp; AI Engineering</h2>
+                            <p>Data collection, RAG and backend foundations</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon scraping"><i class="fas fa-spider"></i></div><div class="skill-info"><h3>Web Scraping</h3><span>Intermediate</span></div></div>
+                        <div class="skill-card"><div class="skill-icon rag"><i class="fas fa-comments"></i></div><div class="skill-info"><h3>RAG &amp; Streamlit</h3><span>Exploring</span></div></div>
+                        <div class="skill-card"><div class="skill-icon fastapi"><i class="fas fa-bolt"></i></div><div class="skill-info"><h3>FastAPI</h3><span>Exploring</span></div></div>
+                        <div class="skill-card"><div class="skill-icon postgres"><i class="fas fa-database"></i></div><div class="skill-info"><h3>PostgreSQL</h3><span>Exploring</span></div></div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-toolbox"></i></div>
+                        <div>
+                            <h2>Tools &amp; Development</h2>
+                            <p>Development environment &amp; version control</p>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card"><div class="skill-icon git"><i class="fab fa-git-alt"></i></div><div class="skill-info"><h3>Git</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon github"><i class="fab fa-github"></i></div><div class="skill-info"><h3>GitHub</h3><span>Advanced</span></div></div>
+                        <div class="skill-card"><div class="skill-icon jupyter"><i class="fas fa-laptop-code"></i></div><div class="skill-info"><h3>Jupyter Notebook</h3><span>Advanced</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS ==================== -->
+        <section class="projects" id="projects">
+            <div class="section-header reveal">
+                <span class="section-label">SELECTED WORK</span>
+                <h1>Projects</h1>
+                <h3>Dashboards, models and data tools I've built</h3>
+            </div>
+
+            <div class="filter-bar reveal" data-target="#projects-grid" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all" type="button">All</button>
+                <button class="filter-btn" data-filter="dashboard" type="button">Dashboards</button>
+                <button class="filter-btn" data-filter="sql" type="button">SQL</button>
+                <button class="filter-btn" data-filter="python" type="button">Python &amp; Scraping</button>
+                <button class="filter-btn" data-filter="ml" type="button">ML &amp; AI</button>
+                <button class="filter-btn" data-filter="web" type="button">Web</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Services Revenue -->
+                <article class="project-card featured" data-category="dashboard sql">
+                    <div class="project-media">
+                        <img src="img/First Sql Project.png" alt="Professional services revenue dashboard" loading="lazy">
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Services Revenue &amp; Performance Analytics</h3>
+                        <p>End-to-end SQL Server + Power BI solution analysing services performance by department,
+                            region and calendar, with DAX measures and a what-if analysis page.</p>
+                        <ul class="tag-list"><li>SQL Server</li><li>Power BI</li><li>DAX</li><li>What-if</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Professional_Services_Revenue_Analytics-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Car Price Prediction -->
+                <article class="project-card featured" data-category="ml python">
+                    <div class="project-media">
+                        <img src="img/Car price prediction cover@1x.png" alt="Car price prediction machine learning model" loading="lazy">
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Car Price Prediction</h3>
+                        <p>My first machine learning project: predicting automobile prices with linear and multiple
+                            linear regression on the automobile dataset.</p>
+                        <ul class="tag-list"><li>Python</li><li>Scikit-learn</li><li>Regression</li><li>EDA</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Cars_Price_Prediction" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
                 </article>
 
 
-                <!-- Excel Data Analysis -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-file-excel"></i>
+                <!-- Baladna -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/Production dashboard cover@1x.png" alt="Baladna production and distribution dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Baladna Production &amp; Distribution</h3>
+                        <p>Power BI dashboard tracking production and distribution, with Power Query unpivoting and
+                            week-over-week DAX measures.</p>
+                        <ul class="tag-list"><li>Power BI</li><li>DAX</li><li>Power Query</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Balabna_Production_Distribution_Dashboard-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
                         </div>
-
-                        <span class="service-number">02</span>
-
                     </div>
-
-                    <h2>Excel Data Analysis</h2>
-
-                    <p>
-                        Transforming business data into structured analysis,
-                        professional reports, KPIs, and interactive Excel dashboards.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Excel</span>
-                        <span>PivotTables</span>
-                        <span>Power Query</span>
-                        <span>Charts</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Data cleaning & transformation</li>
-                            <li>PivotTables & PivotCharts</li>
-                            <li>KPI calculations</li>
-                            <li>Interactive dashboards</li>
-                            <li>Trend & performance analysis</li>
-                            <li>Professional Excel reports</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- Power BI -->
-                <article class="service-card featured-service reveal">
-
-                    <div class="featured-badge">
-                        CORE SERVICE
+                <!-- Misuo -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/Furniture sales cover@1x.png" alt="Misuo furniture sales analysis dashboard" loading="lazy">
                     </div>
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-chart-column"></i>
+                    <div class="project-body">
+                        <h3>Misuo — Furniture Sales Analysis</h3>
+                        <p>Sales analysis dashboard exploring product performance, revenue and trends for a
+                            furniture business.</p>
+                        <ul class="tag-list"><li>Dashboard</li><li>Sales Analysis</li><li>KPIs</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Misuo_Sales_Analysis_Dashboard-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
                         </div>
-
-                        <span class="service-number">03</span>
-
                     </div>
-
-                    <h2>Power BI Dashboards</h2>
-
-                    <p>
-                        Building interactive Power BI dashboards that transform
-                        complex business data into clear KPIs, trends, and insights.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Power Query</span>
-                        <span>KPIs</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Interactive Power BI dashboards</li>
-                            <li>KPI cards & business metrics</li>
-                            <li>DAX measures & calculations</li>
-                            <li>Power Query transformations</li>
-                            <li>Data modeling</li>
-                            <li>Business-focused visualizations</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- SQL -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
+                <!-- Call center -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/Call center cover@1x.png" alt="Sallah call center performance dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Sallah Call Center Performance</h3>
+                        <p>Performance dashboard for a call center, highlighting service levels, agent activity and
+                            key operational KPIs.</p>
+                        <ul class="tag-list"><li>Dashboard</li><li>Operations</li><li>KPIs</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Sallah_Call_Center_Performance_Dashboard-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
                         </div>
-
-                        <span class="service-number">04</span>
-
                     </div>
-
-                    <h2>SQL Data Analysis</h2>
-
-                    <p>
-                        Querying and analyzing structured databases to extract
-                        useful information and answer business questions.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>SQL</span>
-                        <span>MySQL</span>
-                        <span>SQL Server</span>
-                        <span>Queries</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Data extraction</li>
-                            <li>Filtering & aggregation</li>
-                            <li>Joins & subqueries</li>
-                            <li>CTEs & analytical queries</li>
-                            <li>KPI calculations</li>
-                            <li>Business data analysis</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- Python Data Analysis -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fab fa-python"></i>
+                <!-- Tableau HR -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/HR analysis cover@1x.png" alt="Tableau HR analytics dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>HR Performance Analytics</h3>
+                        <p>Interactive Tableau dashboard analysing workforce and HR performance metrics.</p>
+                        <ul class="tag-list"><li>Tableau</li><li>HR Analytics</li></ul>
+                        <div class="project-links">
+                            <a href="https://lnkd.in/dxAiNkys" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> View project</a>
                         </div>
-
-                        <span class="service-number">05</span>
-
                     </div>
-
-                    <h2>Python Data Analysis</h2>
-
-                    <p>
-                        Using Python to clean, explore, analyze, visualize,
-                        and extract meaningful insights from datasets.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Matplotlib</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Data preprocessing</li>
-                            <li>Exploratory Data Analysis</li>
-                            <li>Statistical analysis</li>
-                            <li>Data visualization</li>
-                            <li>Correlation analysis</li>
-                            <li>Insight extraction</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- Machine Learning -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
+                <!-- SuperStore -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/Sales dashboard cover@1x.png" alt="SuperStore sales dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>SuperStore Sales Dashboard</h3>
+                        <p>Sales dashboard built during the NTI data analysis training programme.</p>
+                        <ul class="tag-list"><li>NTI Training</li><li>Sales</li><li>KPIs</li></ul>
+                        <div class="project-links">
+                            <a href="https://lnkd.in/p/e_fDJ2ba" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> View project</a>
                         </div>
-
-                        <span class="service-number">06</span>
-
                     </div>
-
-                    <h2>Machine Learning</h2>
-
-                    <p>
-                        Developing and evaluating machine learning models
-                        to identify patterns and generate predictive insights from data.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Scikit-learn</span>
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Data preprocessing</li>
-                            <li>Feature engineering</li>
-                            <li>Classification models</li>
-                            <li>Regression models</li>
-                            <li>Clustering & segmentation</li>
-                            <li>Model evaluation</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- Data Visualization -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-chart-pie"></i>
+                <!-- High school -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/High school results cover@1x.png" alt="High school results analysis" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>High School Results Analysis</h3>
+                        <p>Analysis and visualisation of high school results to surface patterns across students
+                            and subjects.</p>
+                        <ul class="tag-list"><li>Dashboard</li><li>Education Data</li></ul>
+                        <div class="project-links">
+                            <a href="https://lnkd.in/p/e779GZ-U" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> View project</a>
                         </div>
-
-                        <span class="service-number">07</span>
-
                     </div>
-
-                    <h2>Data Visualization & Reporting</h2>
-
-                    <p>
-                        Creating clear and meaningful visualizations that turn
-                        complex datasets into easy-to-understand insights and reports.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Power BI</span>
-                        <span>Excel</span>
-                        <span>Matplotlib</span>
-                        <span>Seaborn</span>
-                    </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Interactive dashboards</li>
-                            <li>Business KPI visualization</li>
-                            <li>Trend analysis</li>
-                            <li>Performance comparison</li>
-                            <li>Statistical charts</li>
-                            <li>Insight-focused reports</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
-
-                <!-- Statistical Analysis -->
-                <article class="service-card reveal">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-                            <i class="fas fa-square-root-variable"></i>
-                        </div>
-
-                        <span class="service-number">08</span>
-
+                <!-- Financial expense -->
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-media">
+                        <img src="img/Financial expense cover@1x.png" alt="Financial expense tracking dashboard" loading="lazy">
+                        <span class="project-badge">Freelance</span>
                     </div>
-
-                    <h2>Statistical Analysis</h2>
-
-                    <p>
-                        Applying statistical techniques to understand relationships,
-                        distributions, trends, and patterns within your data.
-                    </p>
-
-                    <div class="service-tools">
-                        <span>Python</span>
-                        <span>NumPy</span>
-                        <span>Pandas</span>
-                        <span>Statistics</span>
+                    <div class="project-body">
+                        <h3>Financial Expense Tracker</h3>
+                        <p>My first freelance Excel project: a structured expense analysis with summaries and
+                            charts for a client.</p>
+                        <ul class="tag-list"><li>Excel</li><li>Pivot Tables</li><li>Charts</li></ul>
                     </div>
-
-                    <button class="service-toggle" type="button">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div class="service-details">
-
-                        <h4>What's Included</h4>
-
-                        <ul>
-                            <li>Descriptive statistics</li>
-                            <li>Correlation analysis</li>
-                            <li>Distribution analysis</li>
-                            <li>Trend analysis</li>
-                            <li>Statistical relationships</li>
-                            <li>Data-driven interpretation</li>
-                        </ul>
-
-                    </div>
-
                 </article>
 
+                <!-- Tanqeeb -->
+                <article class="project-card" data-category="python">
+                    <div class="project-media">
+                        <img src="img/Web Scraping Tanqeeb.png" alt="Tanqeeb job listings web scraping project" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Job Listings Scraper — Tanqeeb</h3>
+                        <p>Scrapes AI Engineering job listings in Egypt (title, company, location, posting date)
+                            into clean CSV / Excel files.</p>
+                        <ul class="tag-list"><li>Python</li><li>Requests</li><li>BeautifulSoup</li><li>CSV</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Tanqeeb_WebScraping" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gold -->
+                <article class="project-card" data-category="python">
+                    <div class="project-media">
+                        <img src="img/Gold prices cover 16 9.png" alt="Gold prices web scraping project" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Gold Prices Scraper</h3>
+                        <p>Collects gold prices from market.isagha.com with hourly updates, stored as structured
+                            CSV data ready for analysis.</p>
+                        <ul class="tag-list"><li>Python</li><li>Requests</li><li>BeautifulSoup</li><li>CSV</li></ul>
+                        <div class="project-links">
+                            <a href="https://github.com/kirloshazem-code/Gold_WebScraping" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portfolio website -->
+                <article class="project-card" data-category="web">
+                    <div class="project-media">
+                        <img src="img/Portfolio website cover@1x.png" alt="Personal portfolio website" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>The site you're on: a responsive, neon-themed portfolio built from scratch.</p>
+                        <ul class="tag-list"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+                        <div class="project-links">
+                            <a href="https://kirloshazem-code.github.io/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        </div>
+                    </div>
+                </article>
 
             </div>
 
+            <div class="projects-more reveal">
+                <a href="https://github.com/kirloshazem-code" target="_blank" rel="noopener noreferrer"
+                    class="service-btn secondary-btn"><i class="fab fa-github"></i> See all repositories</a>
+            </div>
+        </section>
 
-            <!-- Stats -->
-            <div class="services-stats reveal">
-
-                <div class="service-stat">
-                    <strong class="counter" data-target="10">0</strong>
-                    <span>Clients / Projects</span>
+        <!-- ==================== PROFESSIONAL JOURNEY ==================== -->
+        <section class="career-journey" id="career-journey">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">EXPERIENCE &amp; EDUCATION</span>
+                    <h1>Professional <span class="highlight">Journey</span></h1>
+                    <h3>My academic and professional path</h3>
                 </div>
 
-                <div class="service-stat">
-                    <strong class="counter" data-target="6">0</strong>
-                    <span>Data Projects</span>
+                <div class="custom-timeline">
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">2025 — Present</span>
+                            <h3 class="job-title">B.Sc. Data Science</h3>
+                            <span class="company"><i class="fas fa-university"></i>Menoufia National University · expected graduation 2029</span>
+                            <ul class="timeline-list">
+                                <li>Focus on data analysis, artificial intelligence and data science</li>
+                                <li>Hands-on with Python, SQL, Power BI, Excel and Tableau</li>
+                                <li>Multiple data analysis and visualisation projects completed</li>
+                                <li>Passionate about AI development and chatbot creation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">2026 — Present</span>
+                            <h3 class="job-title">Freelance Data Analyst &amp; Data Scientist</h3>
+                            <span class="company"><i class="fas fa-laptop-code"></i>Freelance platforms</span>
+                            <ul class="timeline-list">
+                                <li>Cleaned and structured raw datasets for <strong>10+ clients</strong>, improving accuracy and cutting reporting turnaround time</li>
+                                <li>Built interactive Excel and Power BI dashboards with KPI reports to support decisions</li>
+                                <li>Delivered data entry, validation and quality assurance across <strong>6+ client projects</strong></li>
+                                <li>Launched a Power BI dashboard design service on Khamsat</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">Jul — Aug 2026</span>
+                            <h3 class="job-title">Data Analytics Trainee — Summer Training</h3>
+                            <span class="company"><i class="fas fa-building-columns"></i>NTI · National Telecommunication Institute</span>
+                            <ul class="timeline-list">
+                                <li>Completed an intensive <strong>120-hour</strong> programme in data analysis and professional freelancing</li>
+                                <li>Worked through the full analysis workflow: collection, cleaning, modeling, insights</li>
+                                <li>Built interactive dashboards in Power BI and Tableau; used DAX, Power Query and data modeling</li>
+                                <li>Extracted patterns, trends and KPIs from real datasets through business case studies</li>
+                                <li>Learned pitching, proposal writing and personal branding</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">2026</span>
+                            <h3 class="job-title">Data Analytics Diploma (6 months)</h3>
+                            <span class="company"><i class="fas fa-award"></i>Mazen Analytics</span>
+                            <ul class="timeline-list">
+                                <li>Statistics, Excel for data analysis, business fundamentals</li>
+                                <li>Tableau, Power BI, SQL for data analysis and Python</li>
+                                <li>Freelancing skills, plus work on real data from large, well-known companies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">2026</span>
+                            <h3 class="job-title">Freelancing Training Programme</h3>
+                            <span class="company"><i class="fas fa-briefcase"></i>ITIDA+Gigs</span>
+                            <ul class="timeline-list">
+                                <li>Built and optimised professional freelancing profiles</li>
+                                <li>Practised proposal writing, client communication and project management</li>
+                                <li>Strengthened personal branding and readiness for global remote work</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-block">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-date">Aug 2026</span>
+                            <h3 class="job-title">AI Fundamentals &amp; Applications</h3>
+                            <span class="company"><i class="fas fa-school"></i>The British University in Egypt · School of Continuing Education</span>
+                            <ul class="timeline-list">
+                                <li>Core AI concepts, techniques and real-world use cases</li>
+                                <li>How AI supports data-driven decisions and modern analytics workflows</li>
+                                <li>Foundation for applied AI and machine learning projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SERVICES ==================== -->
+        <section class="services-section" id="services">
+            <div class="services-container">
+
+                <div class="section-header services-header reveal">
+                    <span class="section-label">WHAT I CAN DO</span>
+                    <h1>Data Analysis &amp; Data Science Services</h1>
+                    <p>I turn raw data into clean datasets, meaningful insights, interactive dashboards, and
+                        data-driven solutions that support better business decisions.</p>
                 </div>
 
-                <div class="service-stat">
-                    <strong>100%</strong>
-                    <span>Client Focused</span>
+                <div class="services-grid">
+
+                    <article class="service-card featured-service reveal">
+                        <div class="featured-badge">CORE SERVICE</div>
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-chart-column"></i></div>
+                            <span class="service-number">01</span>
+                        </div>
+                        <h2>Power BI Dashboards</h2>
+                        <p>Interactive dashboards that turn complex business data into clear KPIs, trends and insights.</p>
+                        <div class="service-tools"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>KPIs</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Interactive Power BI dashboards</li>
+                                <li>KPI cards &amp; business metrics</li>
+                                <li>DAX measures &amp; calculations</li>
+                                <li>Power Query transformations</li>
+                                <li>Data modeling (star schema)</li>
+                                <li>Business-focused visualisations</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-broom"></i></div>
+                            <span class="service-number">02</span>
+                        </div>
+                        <h2>Data Cleaning &amp; EDA</h2>
+                        <p>Cleaning, preparing and exploring datasets to uncover patterns, trends and relationships.</p>
+                        <div class="service-tools"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Excel</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Data cleaning &amp; preprocessing</li>
+                                <li>Missing value handling</li>
+                                <li>Duplicate detection</li>
+                                <li>Outlier identification</li>
+                                <li>Exploratory Data Analysis (EDA)</li>
+                                <li>Pattern &amp; trend discovery</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-file-excel"></i></div>
+                            <span class="service-number">03</span>
+                        </div>
+                        <h2>Excel Data Analysis</h2>
+                        <p>Structured analysis, professional reports, KPIs and interactive Excel dashboards.</p>
+                        <div class="service-tools"><span>Excel</span><span>PivotTables</span><span>Power Query</span><span>Charts</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Data cleaning &amp; transformation</li>
+                                <li>PivotTables &amp; PivotCharts</li>
+                                <li>KPI calculations</li>
+                                <li>Interactive dashboards</li>
+                                <li>Trend &amp; performance analysis</li>
+                                <li>Professional Excel reports</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-database"></i></div>
+                            <span class="service-number">04</span>
+                        </div>
+                        <h2>SQL Data Analysis</h2>
+                        <p>Querying structured databases to extract useful information and answer business questions.</p>
+                        <div class="service-tools"><span>SQL</span><span>MySQL</span><span>SQL Server</span><span>Queries</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Data extraction</li>
+                                <li>Filtering &amp; aggregation</li>
+                                <li>Joins &amp; subqueries</li>
+                                <li>CTEs &amp; analytical queries</li>
+                                <li>KPI calculations</li>
+                                <li>Business data analysis</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fab fa-python"></i></div>
+                            <span class="service-number">05</span>
+                        </div>
+                        <h2>Python Data Analysis</h2>
+                        <p>Using Python to clean, explore, analyse, visualise and extract insights from datasets.</p>
+                        <div class="service-tools"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Data preprocessing</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Statistical analysis</li>
+                                <li>Data visualisation</li>
+                                <li>Correlation analysis</li>
+                                <li>Insight extraction</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-spider"></i></div>
+                            <span class="service-number">06</span>
+                        </div>
+                        <h2>Web Scraping &amp; Data Collection</h2>
+                        <p>Collecting public web data into clean, ready-to-analyse Excel or CSV files.</p>
+                        <div class="service-tools"><span>Python</span><span>Requests</span><span>BeautifulSoup</span><span>Selenium</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Scraping of static and dynamic pages</li>
+                                <li>Structured, de-duplicated output</li>
+                                <li>Delivery as Excel / CSV</li>
+                                <li>Scheduled / hourly collection</li>
+                                <li>Reusable, documented script</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-brain"></i></div>
+                            <span class="service-number">07</span>
+                        </div>
+                        <h2>Machine Learning</h2>
+                        <p>Developing and evaluating models to identify patterns and generate predictive insights.</p>
+                        <div class="service-tools"><span>Scikit-learn</span><span>Python</span><span>Pandas</span><span>NumPy</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Data preprocessing</li>
+                                <li>Feature engineering</li>
+                                <li>Classification models</li>
+                                <li>Regression models</li>
+                                <li>Clustering &amp; segmentation</li>
+                                <li>Model evaluation</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                            <span class="service-number">08</span>
+                        </div>
+                        <h2>Data Visualisation &amp; Reporting</h2>
+                        <p>Clear visualisations that turn complex datasets into easy-to-understand reports.</p>
+                        <div class="service-tools"><span>Power BI</span><span>Excel</span><span>Matplotlib</span><span>Seaborn</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Interactive dashboards</li>
+                                <li>Business KPI visualisation</li>
+                                <li>Trend analysis</li>
+                                <li>Performance comparison</li>
+                                <li>Statistical charts</li>
+                                <li>Insight-focused reports</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-top">
+                            <div class="service-icon"><i class="fas fa-square-root-variable"></i></div>
+                            <span class="service-number">09</span>
+                        </div>
+                        <h2>Statistical Analysis</h2>
+                        <p>Statistical techniques to understand relationships, distributions and trends in your data.</p>
+                        <div class="service-tools"><span>Python</span><span>NumPy</span><span>Pandas</span><span>Statistics</span></div>
+                        <button class="service-toggle" type="button">View Details <i class="fas fa-arrow-right"></i></button>
+                        <div class="service-details">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li>Descriptive statistics</li>
+                                <li>Correlation analysis</li>
+                                <li>Distribution analysis</li>
+                                <li>Trend analysis</li>
+                                <li>Statistical relationships</li>
+                                <li>Data-driven interpretation</li>
+                            </ul>
+                        </div>
+                    </article>
+
                 </div>
 
-                <div class="service-stat">
-                    <strong>End-to-End</strong>
-                    <span>Data Workflow</span>
+                <div class="services-stats reveal">
+                    <div class="service-stat">
+                        <strong><span class="counter" data-target="10">0</span>+</strong>
+                        <span>Freelance Clients</span>
+                    </div>
+                    <div class="service-stat">
+                        <strong><span class="counter" data-target="14">0</span>+</strong>
+                        <span>Data Projects</span>
+                    </div>
+                    <div class="service-stat">
+                        <strong>100%</strong>
+                        <span>Client Focused</span>
+                    </div>
+                    <div class="service-stat">
+                        <strong>End-to-End</strong>
+                        <span>Data Workflow</span>
+                    </div>
+                </div>
+
+                <div class="services-process reveal">
+                    <div class="process-header">
+                        <span class="section-label">MY PROCESS</span>
+                        <h2>From Raw Data to Insights</h2>
+                        <p>A structured end-to-end workflow that turns raw data into reliable analysis,
+                            visualisations and data-driven insights.</p>
+                    </div>
+
+                    <div class="process-line">
+                        <div class="process-step"><span>01</span><i class="fas fa-comments"></i><h3>Understand</h3><p>Understand the business problem, objectives and data requirements.</p></div>
+                        <div class="process-step"><span>02</span><i class="fas fa-broom"></i><h3>Prepare</h3><p>Clean, transform, validate and prepare the data for analysis.</p></div>
+                        <div class="process-step"><span>03</span><i class="fas fa-magnifying-glass-chart"></i><h3>Analyze</h3><p>Explore the data and identify patterns, trends, relationships and KPIs.</p></div>
+                        <div class="process-step"><span>04</span><i class="fas fa-chart-line"></i><h3>Model &amp; Visualize</h3><p>Build analytical models and communicate findings visually.</p></div>
+                        <div class="process-step"><span>05</span><i class="fas fa-check-circle"></i><h3>Deliver</h3><p>Deliver organised results, reports, dashboards and actionable insights.</p></div>
+                    </div>
+                </div>
+
+                <div class="services-cta reveal">
+                    <div class="cta-content">
+                        <span class="section-label">LET'S WORK TOGETHER</span>
+                        <h2>Have Data? Let's Turn It Into Insights.</h2>
+                        <p>Whether you need data cleaning, analysis, a dashboard, web scraping or a machine learning
+                            solution, I'm ready to help turn your data into meaningful results.</p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="service-btn primary-btn">Hire Me <i class="fas fa-arrow-right"></i></a>
+                        <a href="#projects" class="service-btn secondary-btn">View My Work <i class="fas fa-folder-open"></i></a>
+                    </div>
                 </div>
 
             </div>
+        </section>
 
+        <!-- ==================== SOFT SKILLS ==================== -->
+        <section class="soft-skills" id="soft-skills">
+            <div class="soft-skills-container">
 
-            <!-- Workflow -->
-            <div class="services-process reveal">
-
-                <div class="process-header">
-
-                    <span class="section-label">MY PROCESS</span>
-
-                    <h2>From Raw Data to Insights</h2>
-
-                    <p>
-                        A structured end-to-end workflow designed to transform
-                        raw data into reliable analysis, visualizations,
-                        and data-driven insights.
-                    </p>
-
+                <div class="section-header reveal">
+                    <span class="section-label">PERSONAL STRENGTHS</span>
+                    <h1>Soft Skills</h1>
+                    <p>Professional and interpersonal abilities that help me collaborate, solve problems and deliver
+                        meaningful results.</p>
                 </div>
 
-
-                <div class="process-line">
-
-                    <div class="process-step">
-                        <span>01</span>
-                        <i class="fas fa-comments"></i>
-                        <h3>Understand</h3>
-                        <p>Understand the business problem, objectives, and data requirements.</p>
-                    </div>
-
-                    <div class="process-step">
-                        <span>02</span>
-                        <i class="fas fa-broom"></i>
-                        <h3>Prepare</h3>
-                        <p>Clean, transform, validate, and prepare the data for analysis.</p>
-                    </div>
-
-                    <div class="process-step">
-                        <span>03</span>
-                        <i class="fas fa-magnifying-glass-chart"></i>
-                        <h3>Analyze</h3>
-                        <p>Explore the data and identify patterns, trends, relationships, and KPIs.</p>
-                    </div>
-
-                    <div class="process-step">
-                        <span>04</span>
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Model & Visualize</h3>
-                        <p>Build analytical models and communicate findings through clear visualizations.</p>
-                    </div>
-
-                    <div class="process-step">
-                        <span>05</span>
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Deliver</h3>
-                        <p>Deliver organized results, reports, dashboards, and actionable insights.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- CTA -->
-            <div class="services-cta reveal">
-
-                <div class="cta-content">
-
-                    <span class="section-label">LET'S WORK TOGETHER</span>
-
-                    <h2>Have Data? Let's Turn It Into Insights.</h2>
-
-                    <p>
-                        Whether you need data cleaning, analysis, a dashboard,
-                        machine learning solution, or a complete data science project,
-                        I'm ready to help turn your data into meaningful results.
-                    </p>
-
-                </div>
-
-                <div class="cta-buttons">
-
-                    <a href="#contact" class="service-btn primary-btn">
-                        Hire Me
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-                    <a href="#projects" class="service-btn secondary-btn">
-                        View My Work
-                        <i class="fas fa-folder-open"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- Professional Journey Section - المسيرة المهنية -->
-    <section class="career-journey" id="career-journey">
-        <div class="container">
-            <div class="section-header">
-                <h1>Professional <span class="highlight">Journey</span></h1>
-                <h3>My academic and professional path</h3>
-            </div>
-
-            <div class="custom-timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-block">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2025</span>
-                        <h3 class="job-title">Data Science Student</h3>
-                        <span class="company">Menoufia National University</span>
-                        <p>Currently studying at Menoufia National University, focusing on Data Science and related
-                            fields
-                            Strong interest in Data Analysis , Artificial Intelligence & Data Science
-                            Skilled in Python, SQL, Power BI, Excel, and Tableau
-                            Completed multiple projects in data analysis and visualization
-                            Passionate about AI development and chatbot creation
-                            Continuously learning new technologies and programming languages</p>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="timeline-block">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2026</span>
-                        <h3 class="job-title">Freelance (Data Analyst & Data Scientist)</h3>
-                        <span class="company">Freelance platforms</span>
-                        <p>Cleaned and structured raw datasets for 10+ freelance clients, improving data accuracy and
-                            reducing reporting turnaround
-                            time.
-                            • Built interactive Excel and Power BI dashboards with KPI reports to support business
-                            decision-making.
-                            • Performed high-accuracy data entry, validation, and quality assurance across 6+ client
-                            projects.</p>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="timeline-block">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2026</span>
-                        <h3 class="job-title">Internship (Professional Trainee)</h3>
-                        <span class="company">Itidia-Gigs</span>
-                        <p>Gained practical knowledge about freelancing platforms and remote work opportunities
-                            Learned how to build and optimize professional freelancing profiles
-                            Developed skills in writing proposals and communicating with clients effectively
-                            Understood the fundamentals of starting and growing a freelancing career
-                            Improved personal branding and online professional presence
-                            Gained insights into project management and client relationship handling
-                            Enhanced communication, self-marketing, and career development skills
-                            Explored real-world freelancing workflows and industry best practices
-                            Strengthened readiness for working on global freelancing platforms and remote projects</p>
-                    </div>
-                </div>
-
-
-
-                <!-- Experience 4 -->
-                <div class="timeline-block">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2026</span>
-                        <h3 class="job-title">Summer Training – Data Analysis Track </h3>
-                        <span class="company">NTI (National Telecommunication Institute)</span>
-                        <p>Completed an intensive 120-hour summer training program with NTI, focused on Data Analysis
-                            and professional freelancing skills. Worked on real-world data analysis workflows from data
-                            collection to insight delivery. Applied Python, SQL, and Excel for data cleaning,
-                            transformation, and analysis. Gained hands-on experience building interactive dashboards
-                            using Power BI and Tableau. Improved analytical thinking and business decision-making
-                            through data-driven case studies. Worked with real datasets to extract meaningful patterns,
-                            trends, and KPIs. Enhanced skills in DAX, Power Query, and data modeling for reporting.
-                            Learned practical freelancing skills including pitching, proposal writing, and personal
-                            branding. Strengthened understanding of end-to-end data analysis project lifecycles. Built
-                            practical projects to support a career as a Data Analyst / BI Developer.</p>
-                    </div>
-
-                </div>
-
-                <!-- Experience 5 -->
-                <div class="timeline-block">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2026</span>
-                        <h3 class="job-title">Certified Training (AI Fundamentals & Applications) </h3>
-                        <span class="company">The British University in Egypt – School of Continuing Education</span>
-                        <p>Gained foundational knowledge of core artificial intelligence concepts and principles
-                            Learned practical applications of AI across real-world use cases
-                            Developed understanding of how AI supports data-driven decision-making
-                            Explored key AI techniques and their role in modern analytics workflows
-                            Strengthened technical foundation for advancing into applied AI and machine learning
-                            Enhanced ability to connect AI concepts with data analysis and business insights
-                            Built readiness for integrating AI tools into data analytics and engineering projects</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- project Section -->
-    <section class="projects" id="projects">
-        <div class="section-header">
-            <h1>Projects</h1>
-            <h3>Welcome to my project section</h3>
-        </div>
-
-        <div class="content">
-
-            <div class="item">
-                <img src="img/Portfolio website cover@1x.png" alt="My Web Project" loading="lazy">
-
-                <div class="item-overlay">
-                    <h2>My Web Project</h2>
+                <div class="soft-skills-grid">
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Creative Thinking</h3><p>Innovative, out-of-the-box approaches to complex challenges.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-users" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Team Leadership</h3><p>Guiding teams toward common goals with motivation and clear direction.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-comments" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Communication</h3><p>Explaining technical and analytical ideas clearly to any audience.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Problem Solving</h3><p>Breaking problems down logically and finding practical solutions.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Collaboration</h3><p>Working effectively with diverse teams toward shared objectives.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Freelancing</h3><p>Managing independent projects, talking to clients and delivering on time.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-clock" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Time Management</h3><p>Prioritising tasks and consistently meeting deadlines.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-book-open" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Self Learning</h3><p>Continuously picking up new technologies and sharpening skills.</p></div></div>
+                    <div class="soft-skill-card reveal"><div class="soft-skill-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><div class="soft-skill-info"><h3>Analytical Mindset</h3><p>Turning information into clear insights and confident decisions.</p></div></div>
                 </div>
             </div>
+        </section>
 
+        <!-- ==================== CERTIFICATES ==================== -->
+        <section class="certificates" id="certificates">
+            <div class="section-header reveal">
+                <span class="section-label">CREDENTIALS</span>
+                <h1>Certificates</h1>
+                <h3>Courses, programmes and verified achievements</h3>
+            </div>
 
-            <!-- Misuo Project -->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Misuo_Sales_Analysis_Dashboard-" target="_blank">
-                    <img src="img/Furniture sales cover@1x.png" alt="Misuo Project" loading="lazy">
+            <div class="filter-bar reveal" data-target="#certs-grid" role="group" aria-label="Filter certificates">
+                <button class="filter-btn active" data-filter="all" type="button">All</button>
+                <button class="filter-btn" data-filter="data" type="button">Data &amp; BI</button>
+                <button class="filter-btn" data-filter="ai" type="button">AI &amp; ML</button>
+                <button class="filter-btn" data-filter="prog" type="button">Programming</button>
+                <button class="filter-btn" data-filter="cloud" type="button">Cloud</button>
+                <button class="filter-btn" data-filter="other" type="button">Other</button>
+            </div>
+
+            <div class="content" id="certs-grid">
+
+                <a href="https://mazenanalytics.com/verify_certificate.php?code=MAZ-DIP-214941-D022E7-7EDCA7" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="data">
+                    <div class="item"><img src="img/Mazen Analytics Diploma.png" alt="Data Analytics Diploma — Mazen Analytics" loading="lazy"><div class="item-overlay"><h2>Data Analytics Diploma — Mazen Analytics</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Misuo Project Furniture sales Analysis</h2>
-                </div>
 
-            </div>
-
-            <!-- Tableau HR Analytics -->
-            <div class="item">
-                <a href="https://www.linkedin.com/safety/go/?url=https%3A%2F%2Flnkd.in%2FdxAiNkys&urlhash=tpPi&mt=VtHZx43okojxTm7MV3-DECAM2mVhohtzGVjR9tNy8bGL3xf8E7Dl1fTwGS8JwD4NXQooTHkNNOobHH81rTx1R5QGMvjiEx0qug2h16AEOdsoWa6GAHpv7CvdnMI&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_creator_profile_all_content_view%3BLaPXQQ7KTs%2BhaKliiY20UA%3D%3D"
-                    target="_blank">
-                    <img src="img/HR analysis cover@1x.png" alt="HR Performance Analysis" loading="lazy">
+                <a href="https://coursera.org/share/b39255901d4ac56bd55fca18c67f2a48" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="data">
+                    <div class="item"><img src="img/Google Advanced Data Analyst.png" alt="Google Advanced Data Analytics certificate" loading="lazy"><div class="item-overlay"><h2>Google Advanced Data Analytics — Coursera</h2></div></div>
                 </a>
 
-                <div class="item-overlay">
-                    <h2>Tableau HR Analytics</h2>
-                </div>
-            </div>
-
-            <!-- Sallah Call Center -->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Sallah_Call_Center_Performance_Dashboard-" target="_blank">
-                    <img src="img/Call center cover@1x.png" alt="Sallah Call Center" loading="lazy">
+                <a href="https://coursera.org/share/1f4651f31ccc10f4e70a3040ca729212" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="data">
+                    <div class="item"><img src="img/Google Data Analytics.png" alt="Google Data Analytics certificate" loading="lazy"><div class="item-overlay"><h2>Google Data Analytics — Coursera</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Sallah Call Center</h2>
-                </div>
-            </div>
 
-            <!-- High School Results -->
-            <div class="item">
-                <a href="https://lnkd.in/p/e779GZ-U" target="_blank">
-                    <img src="img/High school results cover@1x.png" alt="High School Results" loading="lazy">
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/NTI _ Data Analysis.png" alt="Data Analysis — NTI" loading="lazy"><div class="item-overlay"><h2>Data Analysis — NTI</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/Data analysis using excel.png" alt="Data Analysis using Excel" loading="lazy"><div class="item-overlay"><h2>Data Analysis using Excel — Almentor</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/تطبيقات علم البيانات-certificate.jpg" alt="Applications of Data Science — Almentor" loading="lazy"><div class="item-overlay"><h2>Applications of Data Science — Almentor</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/Screenshot 2025-11-28 201004.png" alt="Introduction to Data Science — Cisco" loading="lazy"><div class="item-overlay"><h2>Intro to Data Science — Cisco</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/Screenshot 2025-12-15 193012.png" alt="Data Analytics Essentials — Cisco" loading="lazy"><div class="item-overlay"><h2>Data Analytics Essentials — Cisco</h2></div></div>
+                </div>
+
+                <a href="https://coursera.org/share/5c70ee6378fb7b6a11c44d25b9e82973" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="ai">
+                    <div class="item"><img src="img/Machine Learning _ Stanford Online.png" alt="Machine Learning — Stanford Online" loading="lazy"><div class="item-overlay"><h2>Machine Learning — Stanford Online</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>High School Results</h2>
-                </div>
-            </div>
 
-            <!-- SuperStore NTI -->
-            <div class="item">
-                <a href="https://lnkd.in/p/e_fDJ2ba" target="_blank">
-                    <img src="img/Sales dashboard cover@1x.png" alt="SuperStore Dashboard" loading="lazy">
+                <a href="https://coursera.org/verify/specialization/AYN1FMX1DSVJ" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="ai">
+                    <div class="item"><img src="img/Google AI Essentials Specialization.png" alt="Google AI Essentials Specialization" loading="lazy"><div class="item-overlay"><h2>Google AI Essentials — Google (Coursera)</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>SuperStore NTI</h2>
-                </div>
-            </div>
 
-            <!-- Baladna Dashboard -->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Balabna_Production_Distribution_Dashboard-" target="_blank">
-                    <img src="img/Production dashboard cover@1x.png" alt="Baladna Dashboard" loading="lazy">
+                <a href="https://coursera.org/share/eb31eb5aaad22e22ea1bdb8f3d0229ec" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="ai">
+                    <div class="item"><img src="img/Google AI.png" alt="Google AI certificate" loading="lazy"><div class="item-overlay"><h2>Google AI — Coursera</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Baladna Dashboard</h2>
-                </div>
-            </div>
 
-            <!-- First Freelance Excel Project -->
-            <div class="item">
-                <a href="YOUR_PROJECT_LINK" target="_blank">
-                    <img src="img/Financial expense cover@1x.png" alt="Excel Freelance Project" loading="lazy">
+                <a href="https://e.huawei.com/en/talent/ict-academy/#/home" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="ai">
+                    <div class="item"><img src="img/HCIA-AI V4.0  — Huawei ICT Academy.png" alt="HCIA-AI V4.0 — Huawei ICT Academy" loading="lazy"><div class="item-overlay"><h2>HCIA-AI V4.0 — Huawei ICT Academy</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Financial expense</h2>
-                </div>
-            </div>
 
-            <!-- First project _ web scraping _ tanqeeb-->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Tanqeeb_WebScraping" target="_blank">
-                    <img src="img/Web Scraping Tanqeeb.png" alt="Web Scraping Tanqeeb" loading="lazy">
+                <div class="cert" data-category="ai">
+                    <div class="item"><img src="img/Artificial Intelligence Training  The British University in Egypt – School of Continuing Education.png" alt="Artificial Intelligence Training — The British University in Egypt" loading="lazy"><div class="item-overlay"><h2>AI Training — The British University in Egypt</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="ai">
+                    <div class="item"><img src="img/One Million Prompters Initiative – AI Prompt Engineering Certificate (Dubai Future Foundation).png" alt="AI Prompt Engineering — Dubai Future Foundation" loading="lazy"><div class="item-overlay"><h2>AI Prompt Engineering — Dubai Future Foundation</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="ai">
+                    <div class="item"><img src="img/Manara machine learning.png" alt="Machine Learning — Manara Tech" loading="lazy"><div class="item-overlay"><h2>Machine Learning — Manara Tech</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="data">
+                    <div class="item"><img src="img/free code camp python for data.png" alt="Python for Data Analysis — freeCodeCamp" loading="lazy"><div class="item-overlay"><h2>Python for Data Analysis — freeCodeCamp</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="prog">
+                    <div class="item"><img src="img/Intermediate Python code camp.png" alt="Intermediate Python — CodeCamp" loading="lazy"><div class="item-overlay"><h2>Intermediate Python — CodeCamp</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="prog">
+                    <div class="item"><img src="img/python mahara tech.png" alt="Python Basics — Manara Tech" loading="lazy"><div class="item-overlay"><h2>Python Basics — Manara Tech</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="prog">
+                    <div class="item"><img src="img/python cisco 1.png" alt="Python Essentials 1 — Cisco" loading="lazy"><div class="item-overlay"><h2>Python Essentials 1 — Cisco</h2></div></div>
+                </div>
+
+                <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/0026d359cc575d979c28edde2243730570d38d13?utm_medium=organic_social&amp;utm_campaign=sharewidget&amp;utm_content=soa" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="cloud">
+                    <div class="item"><img src="img/Microsoft Azure Fundamentals (AZ-900).png" alt="Microsoft Azure Fundamentals AZ-900" loading="lazy"><div class="item-overlay"><h2>Azure Fundamentals (AZ-900) — Microsoft</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Jobs web scraping _ tanqeeb</h2>
-                </div>
-            </div>
 
-            <!-- Second project _ Golds Price per Hour _ tanqeeb-->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Gold_WebScraping" target="_blank">
-                    <img src="img/Gold prices cover 16 9.png" alt="Web Scraping Tanqeeb" loading="lazy">
+                <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/90beb8bbf5ce0c988df2b5d9b7302d6d50d9a512?utm_medium=organic_social&amp;utm_campaign=sharewidget&amp;utm_content=soa" target="_blank" rel="noopener noreferrer" class="certificate-link cert" data-category="cloud">
+                    <div class="item"><img src="img/AWS Cloud Practitioner (CLF-C02).png" alt="AWS Cloud Practitioner CLF-C02" loading="lazy"><div class="item-overlay"><h2>AWS Cloud Practitioner (CLF-C02)</h2></div></div>
                 </a>
-                <div class="item-overlay">
-                    <h2>Golds Price Web Scraping _ tanqeeb</h2>
+
+                <div class="cert" data-category="other">
+                    <div class="item"><img src="img/ITIDA Gigs Freelance Training Program Certificate.png" alt="ITIDA Gigs Freelance Training Programme" loading="lazy"><div class="item-overlay"><h2>ITIDA Gigs Freelance Training Programme</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="other">
+                    <div class="item"><img src="img/Screenshot 2025-09-28 191151.png" alt="Introduction to Cybersecurity — Cisco" loading="lazy"><div class="item-overlay"><h2>Intro to Cybersecurity — Cisco</h2></div></div>
+                </div>
+
+                <div class="cert" data-category="other">
+                    <div class="item"><img src="img/english.png" alt="English for Beginners — Edraak and British Council" loading="lazy"><div class="item-overlay"><h2>English for Beginners — Edraak &amp; British Council</h2></div></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <span class="section-label">GET IN TOUCH</span>
+                    <h2>Let's Build Something With Data</h2>
+                    <p>Looking for an analyst for a dashboard, a data-cleaning job, a scraper, or an intern who learns
+                        fast? Send me a message — I usually reply within a day.</p>
+
+                    <div class="contact-details">
+                        <a class="contact-detail" href="mailto:kokokokohazem@gmail.com">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>kokokokohazem@gmail.com</span>
+                        </a>
+                        <a class="contact-detail" href="tel:+201204322696">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <span>+20 1204322696</span>
+                        </a>
+                        <a class="contact-detail" href="https://www.linkedin.com/in/kirlos-hazem" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span>linkedin.com/in/kirlos-hazem</span>
+                        </a>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Tanta, Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form reveal">
+                    <form id="contact-form" action="https://formspree.io/f/xdeoqyrn" method="POST">
+                        <input type="hidden" name="_subject" value="New message from your portfolio">
+                        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-group">
+                            <label class="visually-hidden" for="f-name">Your Name</label>
+                            <input id="f-name" type="text" name="name" placeholder="Your Name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="visually-hidden" for="f-email">Your Email</label>
+                            <input id="f-email" type="email" name="email" placeholder="Your Email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="visually-hidden" for="f-msg">Your Message</label>
+                            <textarea id="f-msg" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+
+                        <button type="submit" aria-label="Send message">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- First SQL Project -->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Professional_Services_Revenue_Analytics-" target="_blank">
-                    <img src="img/First Sql Project.png" alt="Web Scraping Tanqeeb" loading="lazy">
-                </a>
-                <div class="item-overlay">
-                    <h2>Service Revenue Analysis - SQL , PowerBi</h2>
-                </div>
-            </div>
-
-
-            <!-- First Machine Learning Project - Car Price Prediction -->
-            <div class="item">
-                <a href="https://github.com/kirloshazem-code/Cars_Price_Prediction" target="_blank">
-                    <img src="img/Car price prediction cover@1x.png" alt="Car Price Prediction - Machine Learning Model" loading="lazy">
-                </a>
-                <div class="item-overlay">
-                    <h2>Car Price Prediction - Machine Learning Model</h2>
-                </div>
-            </div>
-
-
-
-        </div>
-    </section>
-
-
-    </section>
-    <!-- Certificates Section -->
-    <section class="certificates" id="certificates">
-        <div class="section-header">
-            <h1>Certificates</h1>
-            <h3>Here are some of my achievements</h3>
-        </div>
-        <div class="content">
-
-            <a href="https://mazenanalytics.com/verify_certificate.php?code=MAZ-DIP-214941-D022E7-7EDCA7" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Mazen Analytics Diploma.png" alt="Data Analytics Diploma - Mazen Analytics"
-                        loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Data Analytics Diploma - Mazen Analytics</h2>
-                    </div>
-                </div>
-            </a>
-
-            <div class="item">
-                <img src="img/Artificial Intelligence Training  The British University in Egypt – School of Continuing Education.png"
-                    alt="Artificial Intelligence Training" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Artificial Intelligence Training - The British University in Egypt</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/تطبيقات علم البيانات-certificate.jpg" alt="Applications of Data Science" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Applications of Data Science_almentor</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/Data analysis using excel.png" alt="Data analysis using Excel" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Data Analysis using Excel</h2>
-                </div>
-            </div>
-
-
-            <a href="https://e.huawei.com/en/talent/ict-academy/#/home" target="_blank" rel="noopener noreferrer"
-                class="certificate-link">
-                <div class="item">
-                    <img src="img/HCIA-AI V4.0  — Huawei ICT Academy.png" alt="HCIA-AI V4.0" loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>HCIA-AI V4.0 - Huawei ICT Academy</h2>
-                    </div>
-                </div>
-            </a>
-
-            <div class="item">
-                <img src="img/NTI _ Data Analysis.png" alt="Data analysis - NTI" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Data Analysis - NTI</h2>
-                </div>
-            </div>
-
-            <a href="https://coursera.org/share/5c70ee6378fb7b6a11c44d25b9e82973" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Machine Learning _ Stanford Online.png" alt="Machine Learning - Stanford Online"
-                        loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Machine Learning - Stanford Online</h2>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://coursera.org/share/1172ec099c2854b2a383fc8f29787a53" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Google AI Essentials Specialization.png" alt="Google AI Essentials Specialization"
-                        loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Google AI Essentials Specialization - Google (Coursera)</h2>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://coursera.org/share/b39255901d4ac56bd55fca18c67f2a48" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Google Advanced Data Analyst.png" alt="Google Advanced Data Analyst" loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Google Advanced Data Analyst - Google (Coursera)</h2>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://coursera.org/share/1f4651f31ccc10f4e70a3040ca729212" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Google Data Analytics.png" alt="Google Data Analytics" loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Google Data Analytics - Google(Coursera)</h2>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://coursera.org/share/eb31eb5aaad22e22ea1bdb8f3d0229ec" target="_blank"
-                rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Google AI.png" alt="Google AI" loading="lazy">
-
-                    <div class="item-overlay">
-                        <h2>Google AI - Google(Coursera)</h2>
-                    </div>
-                </div>
-            </a>
-
-
-            <a href="diate Python code camp.png" target="_blank" rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Intermediate Python code camp.png" alt="Intermediate Python code camp" loading="lazy">
-                    <div class="item-overlay">
-                        <h2>Intermediate Python - CodeCamp</h2>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/0026d359cc575d979c28edde2243730570d38d13?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa"
-                target="_blank" rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/Microsoft Azure Fundamentals (AZ-900).png" alt="Microsoft Azure Fundamentals"
-                        loading="lazy">
-                    <div class="item-overlay">
-                        <h2>Microsoft Azure Fundamentals (AZ-900) - Microsoft</h2>
-                    </div>
-                </div>
-            </a>
-
-
-            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/90beb8bbf5ce0c988df2b5d9b7302d6d50d9a512?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa"
-                target="_blank" rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/AWS Cloud Practitioner (CLF-C02).png" alt="AWS Cloud Practitioner" loading="lazy">
-                    <div class="item-overlay">
-                        <h2>AWS Cloud Practitioner (CLF-C02) - AWS</h2>
-                    </div>
-                </div>
-            </a>
-
-
-            <a href="hp.com/completed/statement-of-accomplishment/track/90beb8bbf5ce0c988df2b5d9b7302d6d50d9a512?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa"
-                target="_blank" rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/free code camp python for data.png" alt="Python for data analysis - free code camp"
-                        loading="lazy">
-                    <div class="item-overlay">
-                        <h2>Python for Data Analysis - free code camp</h2>
-                    </div>
-                </div>
-            </a>
-
-
-            <a href="httpeted/statement-of-accomplishment/track/90beb8bbf5ce0c988df2b5d9b7302d6d50d9a512?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa"
-                target="_blank" rel="noopener noreferrer" class="certificate-link">
-                <div class="item">
-                    <img src="img/ITIDA Gigs Freelance Training Program Certificate.png"
-                        alt="ITIDA Gigs Freelance Training Program Certificate" loading="lazy">
-                    <div class="item-overlay">
-                        <h2>ITIDA Gigs Freelance Training Program - ITIDA</h2>
-                    </div>
-                </div>
-            </a>
-
-
-            <div class="item">
-                <img src="img/One Million Prompters Initiative – AI Prompt Engineering Certificate (Dubai Future Foundation).png"
-                    alt="One Million Prompters Initiative – AI Prompt Engineering Certificate (Dubai Future Foundation)"
-                    loading="lazy">
-                <div class="item-overlay">
-                    <h2>One Million Prompters Initiative – AI Prompt Engineering Certificate (Dubai Future Foundation)
-                    </h2>
-                </div>
-            </div>
-
-
-            <div class="item">
-                <img src="img/Manara machine learning.png" alt="Machine Learning - Manara Tech" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Machine Learning - Manara Tech</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/python mahara tech.png" alt="Python Basics - Mahara Tech" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Python Basics - Mahara Tech</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/Screenshot 2025-09-28 191151.png" alt="Introduction to cyber security from Cisco"
-                    loading="lazy">
-                <div class="item-overlay">
-                    <h2>Intro to Cyber Security - Cisco</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/python cisco 1.png" alt="Python 1from Cisco" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Python 1 - Cisco</h2>
-                </div>
-            </div>
-
-
-
-            <div class="item">
-                <img src="img/Screenshot 2025-11-28 201004.png" alt="Introduction to data science from Cisco"
-                    loading="lazy">
-                <div class="item-overlay">
-                    <h2>Intro to Data Science - Cisco</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/Screenshot 2025-12-15 193012.png" alt="Data analysis Essential from Cisco" loading="lazy">
-                <div class="item-overlay">
-                    <h2>Data Analysis Essential - Cisco</h2>
-                </div>
-            </div>
-
-
-            <div class="item">
-                <img src="img/english.png" alt="english for Beginners" loading="lazy">
-                <div class="item-overlay">
-                    <h2>English for Beginners - Edraak & British council</h2>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-content">
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-                <p>I'm always open to discussing data science opportunities, collaborations, or just having a chat about
-                    the latest trends in technology.</p>
-
-                <div class="contact-details">
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>kokokokohazem@gmail.com</span>
-                    </div>
-
-                    <div class="contact-detail">
-                        <i class="fas fa-phone" aria-hidden="true"></i>
-                        <span>+20 1204322696</span>
-                    </div>
-
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <span>Tanta, Egypt</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form">
-                <form id="contact-form" action="https://formspree.io/f/xdeoqyrn" method="POST">
-
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                    </div>
-
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required
-                            aria-label="Your Message"></textarea>
-                    </div>
-
-                    <button type="submit" aria-label="Send message">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                        Send Message
-                    </button>
-
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; <span id="current-year">2025</span> Kirlos Hazem. All rights reserved.</p>
-            <p>Thank you for visiting my portfolio. Wishing you a great day!</p>
-            <p>— Kirlos Hazem</p>
+            <a href="#header" class="logo">Kirlos Hazem</a>
+            <p class="footer-tagline">Data Analyst · Data Scientist · Tanta, Egypt</p>
+
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#about-details">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/kirlos-hazem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/kirloshazem-code" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.credly.com/users/kirlos-hazem" target="_blank" rel="noopener noreferrer" aria-label="Credly"><i class="fas fa-certificate"></i></a>
+                <a href="mailto:kokokokohazem@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <p>&copy; <span id="current-year">2026</span> Kirlos Hazem. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="enhancements.js" defer></script>
 </body>
 
 </html>
